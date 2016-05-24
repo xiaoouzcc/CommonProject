@@ -14,7 +14,7 @@ import android.view.ViewGroup;
  * @desc
  * @date 2016/5/19 14:17
  */
-public class BasicAdapter<Data> extends RecyclerView.Adapter<ViewHolder>{
+public class  BasicAdapter<Data> extends RecyclerView.Adapter<ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
