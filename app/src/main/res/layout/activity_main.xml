@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="test.amoby.com.testproject.MainActivity">
+    <test.amoby.com.testproject.test.amoby.TestViewGroup
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:background="#455667">
+
+        <TextView
+            android:id="@id/dragMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff4665"
+            android:text="菜单---"/>
+    </test.amoby.com.testproject.test.amoby.TestViewGroup>
+    <!--<test.amoby.com.testproject.DragLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<TextView-->
+            <!--android:id="@id/dragMenu"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#ffffff"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:text="这是菜单布局-&#45;&#45;"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@id/dragContent"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#003522"-->
+            <!--android:text="这是内容布局"/>-->
+
+
+    <!--</test.amoby.com.testproject.DragLayout>-->
+
+    <!--<other.DragLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<TextView-->
+            <!--android:id="@id/dragMenu"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#543333"-->
+            <!--android:text="这是菜单布局"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@id/dragContent"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#003522"-->
+            <!--android:text="这是内容布局"/>-->
+    <!--</other.DragLayout>-->
+
+</RelativeLayout>
