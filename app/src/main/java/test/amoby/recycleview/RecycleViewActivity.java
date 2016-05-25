@@ -48,14 +48,7 @@ public class RecycleViewActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.id_action_add:
-                List<NameBean> listBean = new ArrayList<>();
-                for (int i = 0; i < 50; i++) {
-                    NameBean bean = new NameBean();
-                    bean.setName("第" + i + "行");
-                    listBean.add(bean);
-                }
-
-                mAdapter.insertData(listBean);
+                mAdapter.insertData(1);
                 break;
             case R.id.id_action_delete:
                 mAdapter.deleteData(1);

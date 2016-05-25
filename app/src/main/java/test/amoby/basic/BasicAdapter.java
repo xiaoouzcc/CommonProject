@@ -31,11 +31,8 @@ public abstract class BasicAdapter<Data> extends RecyclerView.Adapter<ViewHolder
     }
 
 
-    public void insertData(List<Data> data) {
-        for (int i = 0; i < data.size(); i++) {
-            data.add(data.get(i));
+    public void insertData(int position) {
             this.notifyItemInserted(0);
-        }
 
     }
 
