@@ -27,6 +27,7 @@ public class RecycleViewActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.card_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new MyRecycleViewAdapter(getApplicationContext(), mListData);
+        recyclerView.addItemDecoration(new RecycleListViewDivider(getApplicationContext(),R.drawable.divider_drawable, RecycleListViewDivider.Orientation.VERTICAL));
         recyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClick(new BasicAdapter.OnItemClickListener() {
             @Override
