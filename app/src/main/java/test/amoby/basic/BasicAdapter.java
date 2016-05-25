@@ -23,6 +23,25 @@ public abstract class BasicAdapter<Data> extends RecyclerView.Adapter<ViewHolder
 
     private Context mContext;
     private List<Data> mData;
+    private OnItemClickListener mItemClickListener;
+    private OnItemLongClickListener mItemLongClickListener;
+    private View mRootView;
+
+    public interface OnItemClickListener {
+
+        void onClickListener();
+
+    }
+
+    public interface OnItemLongClickListener {
+
+        void onLongClickListener();
+    }
+
+    public void setOnItemClick(OnItemClickListener listener) {
+
+        this.mItemClickListener = listener;
+    }
 
     protected BasicAdapter(Context context, List<Data> data) {
 
@@ -32,7 +51,7 @@ public abstract class BasicAdapter<Data> extends RecyclerView.Adapter<ViewHolder
 
 
     public void insertData(int position) {
-            this.notifyItemInserted(0);
+        this.notifyItemInserted(0);
 
     }
 
@@ -47,8 +66,23 @@ public abstract class BasicAdapter<Data> extends RecyclerView.Adapter<ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-       View view = LayoutInflater.from(mContext).inflate(setLayout(), null);
+        View view = LayoutInflater.from(mContext).inflate(setLayout(), null);
         ViewHolder holder = new ViewHolder(view);
+        mRootView = view;
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mItemClickListener.onClickListener();
+            }
+        });
+        view.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                mItemLongClickListener.onLongClickListener();
+                return false;
+            }
+        });
+
         return holder;
     }
 

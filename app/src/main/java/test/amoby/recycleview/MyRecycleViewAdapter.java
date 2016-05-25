@@ -20,12 +20,12 @@ import test.amoby.com.testproject.R;
  * @desc
  * @date 2016/5/18 15:17
  */
-public class MyRecycleViewAdapter extends BasicAdapter<NameBean> {
+public class MyRecycleViewAdapter extends BasicAdapter<NameBean>{
 
     List<NameBean> mListData;
     private Context mContext;
 
-    protected MyRecycleViewAdapter(Context context, List<NameBean> data) {
+    protected MyRecycleViewAdapter(Context context,List<NameBean> data) {
         super(context, data);
         this.mContext = context;
         this.mListData = data;
@@ -40,8 +40,6 @@ public class MyRecycleViewAdapter extends BasicAdapter<NameBean> {
     public void getView(ViewHolder holder, int position) {
         TextView txt = holder.obtainView(R.id.title);
         txt.setText(mListData.get(position).getName());
-
-
     }
 }
 

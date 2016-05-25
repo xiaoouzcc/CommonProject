@@ -6,10 +6,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import test.amoby.basic.BasicAdapter;
 import test.amoby.com.testproject.R;
 
 public class RecycleViewActivity extends AppCompatActivity {
@@ -26,7 +28,12 @@ public class RecycleViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new MyRecycleViewAdapter(getApplicationContext(), mListData);
         recyclerView.setAdapter(mAdapter);
-
+        mAdapter.setOnItemClick(new BasicAdapter.OnItemClickListener() {
+            @Override
+            public void onClickListener() {
+                Toast.makeText(getApplicationContext(),"11",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initData() {
