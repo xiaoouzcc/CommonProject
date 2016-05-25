@@ -7,14 +7,12 @@
 package test.amoby.recycleview;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
 
+import test.amoby.basic.BasicAdapter;
+import test.amoby.basic.ViewHolder;
 import test.amoby.com.testproject.R;
 
 /**
@@ -22,54 +20,28 @@ import test.amoby.com.testproject.R;
  * @desc
  * @date 2016/5/18 15:17
  */
-public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdapter.MyViewHolder> {
+public class MyRecycleViewAdapter extends BasicAdapter<NameBean> {
 
-    List<String> mListData;
+    List<NameBean> mListData;
     private Context mContext;
 
-    MyRecycleViewAdapter(Context context,List<String> list) {
+    protected MyRecycleViewAdapter(Context context, List<NameBean> data) {
+        super(context, data);
         this.mContext = context;
-        this.mListData = list;
-    }
-
-
-    @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-        View view = LayoutInflater.from(mContext).inflate(R.layout.item_recyclerview_list,null);
-        MyViewHolder holder = new MyViewHolder(view);
-        return holder;
+        this.mListData = data;
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
-
-        holder.tv.setText(mListData.get(position));
+    public int setLayout() {
+        return R.layout.item_recyclerview_list;
     }
 
     @Override
-    public int getItemCount() {
-        return mListData.size();
-    }
+    public void getView(ViewHolder holder, int position) {
+        TextView txt = holder.obtainView(R.id.title);
+        txt.setText(mListData.get(position).getName());
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tv;
-
-        public MyViewHolder(View view) {
-            super(view);
-            tv = (TextView) view.findViewById(R.id.title);
-        }
-    }
-
-    public void addData(int position) {
-        mListData.add(position, "Insert One");
-        notifyItemInserted(position);
-    }
-
-    public void removeData(int position) {
-        mListData.remove(position);
-        notifyItemRemoved(position);
     }
 }
 

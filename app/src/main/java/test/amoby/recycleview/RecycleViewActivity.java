@@ -14,7 +14,7 @@ import test.amoby.com.testproject.R;
 
 public class RecycleViewActivity extends AppCompatActivity {
 
-    private List<String> mListData = new ArrayList<String>();
+    private List<NameBean> mListData = new ArrayList<NameBean>();
     private MyRecycleViewAdapter mAdapter;
 
     @Override
@@ -25,12 +25,6 @@ public class RecycleViewActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.card_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new MyRecycleViewAdapter(getApplicationContext(), mListData);
-//        recyclerView.addItemDecoration(new RecyclerView.ItemDecoration() {
-//            @Override
-//            public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
-//                super.onDraw(c, parent, state);
-//            }
-//        });
         recyclerView.setAdapter(mAdapter);
 
     }
@@ -38,7 +32,9 @@ public class RecycleViewActivity extends AppCompatActivity {
     private void initData() {
 
         for (int i = 0; i < 50; i++) {
-            mListData.add("第" + i + "行");
+            NameBean bean = new NameBean();
+            bean.setName("第" + i + "行");
+            mListData.add(bean);
         }
     }
 
@@ -52,10 +48,17 @@ public class RecycleViewActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.id_action_add:
-                mAdapter.addData(1);
+                List<NameBean> listBean = new ArrayList<>();
+                for (int i = 0; i < 50; i++) {
+                    NameBean bean = new NameBean();
+                    bean.setName("第" + i + "行");
+                    listBean.add(bean);
+                }
+
+                mAdapter.insertData(listBean);
                 break;
             case R.id.id_action_delete:
-                mAdapter.removeData(1);
+                mAdapter.deleteData(1);
                 break;
         }
         return true;

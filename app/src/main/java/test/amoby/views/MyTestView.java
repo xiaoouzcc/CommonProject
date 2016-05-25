@@ -32,7 +32,6 @@ public class MyTestView extends View {
     private int mFillColor = 0xFF000000;
     private int mTextColor = 0xFF999999;
 
-    private int mCirclrColorPressed = 0xFF345555;
     private int mFillColorPressed = 0xFFFF0000;
     private int mTextColorPressed = 0xFF343322;
 
@@ -100,7 +99,6 @@ public class MyTestView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-       // Log.e("onDraw()",mCountNum+"---");
         mRectF = new RectF(mDrawX - Radius, mDrawY - Radius, mDrawX + Radius, mDrawY + Radius);
         String textStr = mCountNum + "";
         Rect bounds = new Rect();

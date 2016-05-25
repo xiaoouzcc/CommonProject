@@ -18,17 +18,17 @@ import android.view.View;
 public class ViewHolder extends RecyclerView.ViewHolder{
 
     private SparseArray<View> mViews = new SparseArray<>();
-
+    private View mView;
     public ViewHolder(View itemView) {
         super(itemView);
+        this.mView = itemView;
     }
 
-    public <T extends View> T obtainView(View convertView, int viewId) {
-        View v = mViews.get(viewId);
-        if (v != null && convertView != null) {
-
-            v = convertView.findViewById(viewId);
-            mViews.put(viewId, v);
+    public <T extends View> T obtainView(int resId) {
+        View v = mViews.get(resId);
+        if (null == v) {
+            v = mView.findViewById(resId);
+            mViews.put(resId, v);
         }
         return (T) v;
     }
