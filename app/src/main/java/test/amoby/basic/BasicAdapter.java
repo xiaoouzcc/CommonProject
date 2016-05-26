@@ -19,7 +19,7 @@ import java.util.List;
  * @desc
  * @date 2016/5/19 14:17
  */
-public abstract class BasicAdapter<Data> extends RecyclerView.Adapter<ViewHolder> {
+public abstract class BasicAdapter<Data> extends RecyclerView.Adapter<BaseViewHolder> {
 
     private Context mContext;
     private List<Data> mData;
@@ -65,9 +65,9 @@ public abstract class BasicAdapter<Data> extends RecyclerView.Adapter<ViewHolder
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(setLayout(), null);
-        ViewHolder holder = new ViewHolder(view);
+        BaseViewHolder holder = new BaseViewHolder(view);
         mRootView = view;
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +87,7 @@ public abstract class BasicAdapter<Data> extends RecyclerView.Adapter<ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(BaseViewHolder holder, int position) {
         getView(holder, position);
     }
 
@@ -99,6 +99,6 @@ public abstract class BasicAdapter<Data> extends RecyclerView.Adapter<ViewHolder
 
     public abstract int setLayout();
 
-    public abstract void getView(ViewHolder holder, int position);
+    public abstract void getView(BaseViewHolder holder, int position);
 }
 

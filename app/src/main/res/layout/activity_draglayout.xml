@@ -5,9 +5,9 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DraglayoutActivity">
+    tools:context="test.amoby.test.draglayout.DraglayoutActivity">
 
-    <test.amoby.com.testproject.DragLayout
+    <test.amoby.test.draglayout.DragLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#455667">
@@ -25,6 +25,6 @@
             android:layout_height="wrap_content"
             android:background="#003522"
             android:text="这是内容布局"/>
-    </test.amoby.com.testproject.DragLayout>
+    </test.amoby.test.draglayout.DragLayout>
 
 </RelativeLayout>

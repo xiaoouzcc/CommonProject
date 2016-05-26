@@ -8,20 +8,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DraglayoutActivity"
-                  android:configChanges="orientation|keyboardHidden|screenSize"
-                  android:screenOrientation="portrait"
-                  android:windowSoftInputMode="adjustUnspecified|stateHidden">
-        </activity>
         <activity
-            android:name="test.amoby.recycleview.RecycleViewActivity"
+            android:name="test.amoby.test.draglayout.DraglayoutActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden">
-
         </activity>
         <activity
-            android:name="test.amoby.basic.BasicActivity"
+            android:name="test.amoby.test.recycleview.RecycleViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
+        </activity>
+        <activity
+            android:name="test.amoby.ui.activity.BasicActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden">
@@ -32,10 +32,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="test.amoby.views.TestViewActivity"
+            android:name="test.amoby.test.views.TestViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden">
+        </activity>
+        <activity android:name="test.amoby.test.mvp.MvpLoginActivity">
+        </activity>
+        <activity android:name="test.amoby.ui.activity.BaseActivity">
         </activity>
     </application>
 
