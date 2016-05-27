@@ -27,7 +27,7 @@ public class MvpLoginActivity extends Activity implements LoginViewImpl,LoaderMa
     protected void onStart() {
         super.onStart();
         mLoginPresenter.attachView(this);
-        mLoginPresenter.login("111111","111111");
+        mLoginPresenter.login(getApplicationContext(),"18716664540","111111");
     }
 
     @Override

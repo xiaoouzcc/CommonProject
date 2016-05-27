@@ -6,6 +6,8 @@
  */
 package test.amoby.test.mvp.presenter;
 
+import android.content.Context;
+
 import test.amoby.basic.mvp.BasePresenter;
 import test.amoby.test.mvp.model.LoginModel;
 import test.amoby.test.mvp.view.LoginViewImpl;
@@ -34,8 +36,8 @@ public class LoginPresenter extends BasePresenter<LoginViewImpl> implements Logi
         LoginPresenter.this.getMvpView().loginFail(message);
     }
 
-    public void login(String username, String password) {
-        mLoginModel.login(username, password);
+    public void login(Context context,String username, String password) {
+        mLoginModel.login(context,username, password);
     }
 }
 
