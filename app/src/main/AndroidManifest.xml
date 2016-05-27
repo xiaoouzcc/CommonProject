@@ -39,7 +39,9 @@
         </activity>
         <activity android:name="test.amoby.test.mvp.MvpLoginActivity">
         </activity>
-        <activity android:name="test.amoby.ui.activity.BaseActivity">
+        <!-- <activity android:name="test.amoby.ui.activity.BaseActivity"> -->
+        <!-- </activity> -->
+        <activity android:name="test.amoby.ui.activity.MessageActivity">
         </activity>
     </application>
 

@@ -7,6 +7,10 @@ import test.amoby.com.testproject.R;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +28,12 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected abstract void initViews(Bundle savedInstanceState);
+
     protected abstract void initToolbar(Bundle savedInstanceState);
+
     protected abstract void initListeners();
+
     protected abstract void initData();
+
     protected abstract void clearDestory();
 }

@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="test.amoby.ui.activity.BasicActivity"
-    tools:showIn="@layout/activity_basic"
     android:orientation="vertical">
-    <TextView
-        android:id="@+id/txt_main_recycleview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
-        android:text="recycleview"/>
-    <TextView
-        android:id="@+id/txt_main_draglayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
-        android:text="draglayout"/>
     <TextView
         android:id="@+id/txt_main_mytextview"
         android:layout_width="match_parent"
@@ -37,4 +18,27 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:text="testmvp"/>
+
+    <TextView
+        android:id="@+id/txt_main_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="recycleview"/>
+    <TextView
+        android:id="@+id/txt_main_draglayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="draglayout"/>
+
+    <TextView
+        android:id="@+id/txt_main_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="testMessage"/>
 </LinearLayout>
