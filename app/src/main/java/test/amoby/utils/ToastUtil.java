@@ -1,9 +1,3 @@
-/**
- * @projectName ${O2OService}
- * @version V1.0
- * @address http://www.yingmob.com/
- * @copyright 本内容仅限于淮安爱赢互通科技有限公司内部使用，禁止转发.
- */
 package test.amoby.utils;
 
 import android.content.Context;

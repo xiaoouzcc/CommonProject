@@ -1,9 +1,3 @@
-/**
- * @projectName ${O2OService}
- * @version V1.0
- * @address http://www.yingmob.com/
- * @copyright 本内容仅限于淮安爱赢互通科技有限公司内部使用，禁止转发.
- */
 package test.amoby.utils;
 
 import android.content.Context;
@@ -17,7 +11,7 @@ public class NetUtil {
 	public static final int NETWORN_MOBILE = 2;  //3G等
 	/**
 	 * 判断是否联网
-	 * @author 左成城 
+	 * @author 左成城
 	 * @data 2015-6-1 下午2:42:57
 	 * @param context
 	 * @return
